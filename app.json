@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "ProReklame",
+    "slug": "ProReklame",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": { 
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyACIs755uWl3Fc_P9kuKFBfCaWopjjj9jQ"
+    }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.prabowo.ProReklame",
+      "config": {
+        "googleMaps": {
+            "apiKey": "AIzaSyACIs755uWl3Fc_P9kuKFBfCaWopjjj9jQ"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
