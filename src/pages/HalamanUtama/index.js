@@ -1,14 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, SafeAreaView,} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, SafeAreaView, ImageBackground} from 'react-native';
+
+const image = { uri: "http://smartreklame.my.id/assets/img/reklame bg-awal.png" };
 
 const HalamanUtama = ({ navigation }) => {
     return (
-      <ScrollView style={styles.hal}>
+      <ScrollView>
       <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.h3}>SISTEM INFORMASI PERIZINAN</Text>
+      <View style={styles.hal}>
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        {/* <Text style={styles.h3}>SISTEM INFORMASI PERIZINAN</Text>
         <Text style={styles.h3}>PERIZINAN DAN PEMETAAN</Text>
-        <Text style={styles.h3}>REKLAME</Text>
+        <Text style={styles.h3}>REKLAME</Text> */}
         
         <View style={styles.conbutton}>
           <TouchableOpacity
@@ -25,6 +28,7 @@ const HalamanUtama = ({ navigation }) => {
             <Text style={styles.textbutton}>LOGIN</Text>
           </TouchableOpacity>
         </View>
+      </ImageBackground>
       </View>
       </SafeAreaView>
       </ScrollView>
@@ -35,10 +39,16 @@ export default HalamanUtama;
 
 const styles = StyleSheet.create({
   hal: {
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    height:680
+    // width: 400,
   },
   container: {
-    flex: 1,
     // backgroundColor: '#fff',
     alignItems: 'center',
     marginTop: 30
@@ -48,9 +58,9 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   conbutton: {
-    flex: 1,
+    // flex: 1,
     alignItems: 'center',
-    marginTop: 30
+    // marginTop: 350
   },
   button: {
     width : 180,

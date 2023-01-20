@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image, Button, ScrollView, SafeAreaView , TextInput} from 'react-native';
+import { View, Text, StyleSheet, Image, Button, ScrollView, SafeAreaView , TextInput, ImageBackground} from 'react-native';
 
 import * as ImagePicker from 'expo-image-picker';
 import Constants from 'expo-constants';
+
+const image = { uri: "http://smartreklame.my.id/assets/img/reklame bg-laporkan-login.png" }; 
 
   const Laporan = ({ navigation }) => {
   const [namaPelapor, setNamaP] = useState('');
@@ -127,6 +129,7 @@ import Constants from 'expo-constants';
     <ScrollView>
     <SafeAreaView>
 <View style={styles.hal} >
+<ImageBackground source={image} resizeMode="cover" style={styles.imagebackground}>
 <View style={styles.container} >
 <Text style={styles.h3}>Laporkan Reklame Ilegal</Text>
 <View style={styles.line}></View>
@@ -199,14 +202,15 @@ import Constants from 'expo-constants';
   >
   </TextInput>
 </View>
-<View style={styles.boxbutton}>
-{ uploading ? <Text>Mohon Tunggu Hingga Selesai</Text> :
-        <Button
+  <View style={styles.boxbutton}>
+  { uploading ? <Text>Mohon Tunggu Hingga Selesai</Text> :
+          <Button
           title="Laporkan"
-        onPress={uploadFile}
-        /> }
-        {/* /> } */}
-</View>
+          onPress={uploadFile}
+          /> }
+          {/* /> } */}
+  </View>
+  </ImageBackground>
 </View>
     </SafeAreaView>
     </ScrollView>
@@ -219,10 +223,16 @@ export default Laporan;
 // Just some styles
 const styles = StyleSheet.create({
   hal: {
-
+    flex: 1
+  },
+  imagebackground: {
+    resizeMode: 'cover'
+  },
+  image: {
+    width: 300,
+    height: 300
   },
   container: {
-    flex: 1,
     alignItems: 'center',
     marginTop: 30
     // justifyContent: 'center',
@@ -266,7 +276,7 @@ const styles = StyleSheet.create({
     marginVertical: 12,
   },
   boxbutton: {
-    margin: (20,10),
+    margin: (20),
     // marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -283,10 +293,5 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     padding: 10
-  },
-  image: {
-    width: 120,
-    height: 100,
-    resizeMode: 'cover'
   }
 });

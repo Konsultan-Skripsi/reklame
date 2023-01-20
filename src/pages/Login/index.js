@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, KeyboardAvoidingView , TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, KeyboardAvoidingView , TouchableWithoutFeedback, Keyboard, ImageBackground } from 'react-native';
+
+const image = { uri: "http://smartreklame.my.id/assets/img/reklame bg-laporkan-login.png" };  
 
   const Login = ({navigation}) => {
 
@@ -75,6 +77,7 @@ import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, Keyboar
 
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
       <View style={styles.container}>
         <Text style={styles.h3}>APLIKASI PERIZINAN</Text>
         <Text style={styles.h3}>REKLAME</Text>
@@ -119,6 +122,7 @@ import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, Keyboar
 
         <StatusBar style="auto" />
       </View>
+        </ImageBackground>
 
       </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
@@ -134,7 +138,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 20,
+    // marginTop: 20,
   },
   h3: {
     fontSize: 24,
@@ -149,12 +153,12 @@ const styles = StyleSheet.create({
   buttonContainer: {
     // backgroundColor: '#fff',
     width: 300,
-    height:150,
+    height:325,
     // marginTop: 50,
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#01030e',
-    flex: 1,
+    // flex: 1,
     backgroundColor: '#fff',
     // justifyContent: "center",
     alignItems: "center",
@@ -185,5 +189,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#36b9cc',
     marginVertical: 7,
     paddingVertical: 10
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    width: 400,
   },
 });

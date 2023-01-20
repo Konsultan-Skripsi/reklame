@@ -16,11 +16,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": { 
+    "ios": {
       "supportsTablet": true,
       "config": {
         "googleMapsApiKey": "AIzaSyACIs755uWl3Fc_P9kuKFBfCaWopjjj9jQ"
-    }
+      },
+      "bundleIdentifier": "com.prabowo.ProReklame"
     },
     "android": {
       "adaptiveIcon": {
@@ -30,12 +31,17 @@
       "package": "com.prabowo.ProReklame",
       "config": {
         "googleMaps": {
-            "apiKey": "AIzaSyACIs755uWl3Fc_P9kuKFBfCaWopjjj9jQ"
+          "apiKey": "AIzaSyACIs755uWl3Fc_P9kuKFBfCaWopjjj9jQ"
         }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b2fb22f0-475c-4a6b-a2a9-18181506f40c"
+      }
     }
   }
 }
