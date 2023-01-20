@@ -5,9 +5,9 @@ const image = { uri: "http://smartreklame.my.id/assets/img/reklame bg-awal.png" 
 
 const HalamanUtama = ({ navigation }) => {
     return (
-      <ScrollView>
-      <SafeAreaView>
-      <View style={styles.hal}>
+      // <ScrollView>
+      // <SafeAreaView>
+      <View style={styles.container}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         {/* <Text style={styles.h3}>SISTEM INFORMASI PERIZINAN</Text>
         <Text style={styles.h3}>PERIZINAN DAN PEMETAAN</Text>
@@ -30,30 +30,30 @@ const HalamanUtama = ({ navigation }) => {
         </View>
       </ImageBackground>
       </View>
-      </SafeAreaView>
-      </ScrollView>
+      // {/* </SafeAreaView> */}
+      // </ScrollView>
     );
 }
 
 export default HalamanUtama;
 
 const styles = StyleSheet.create({
-  hal: {
+  container: {
     // backgroundColor: '#fff',
     flex: 1,
   },
   image: {
     flex: 1,
     justifyContent: 'center',
-    height:680
+    // height:680
     // width: 400,
   },
-  container: {
-    // backgroundColor: '#fff',
-    alignItems: 'center',
-    marginTop: 30
-    // justifyContent: 'center',
-  },
+  // container: {
+  //   // backgroundColor: '#fff',
+  //   alignItems: 'center',
+  //   marginTop: 30
+  //   // justifyContent: 'center',
+  // },
   h3: {
     fontSize: 24,
   },
